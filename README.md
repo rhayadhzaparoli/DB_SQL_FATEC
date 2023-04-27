@@ -4,4 +4,4 @@ ________________________________________________________________________________
 ## Conteúdo prático das aulas de Banco de Dados, referente a consultas SQL.
 _____________________________________________________________________________________________________________________________________________________
 
-#### Prof.: Valdir Tobias | Fculdade de Tecnologia Rubens Lara
+#### Prof.: Valdir Tobias | Faculdade de Tecnologia (FATEC) Rubens Lara
