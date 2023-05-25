@@ -64,3 +64,6 @@ insert into tb_faturas values (18,3,8,505.45,1)
 
 
 select * from tb_faturas
+select * from tb_item
+select * from tb_cliente
+select * from tb_status
