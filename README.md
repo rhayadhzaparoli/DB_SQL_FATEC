@@ -6,4 +6,3 @@ ________________________________________________________________________________
 
 #### Prof.: Valdir Tobias | Faculdade de Tecnologia (FATEC) Rubens Lara
 
-#### Lembre-se: não deixe seu GitHub logado nos computadores da Fatec. Segurança em primeiro lugar!
