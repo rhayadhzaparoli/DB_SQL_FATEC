@@ -14,7 +14,7 @@ CREATE TABLE Vendedor(
 cd_Vendedor INTEGER NOT NULL CHECK (cd_Vendedor > 0),
 nm_Vendedor VARCHAR(40) NOT NULL,
 ds_Endereco VARCHAR(40) NOT NULL,
-cd_CPF DECIMAL(11) NOT NULL,
+cd_CPF DECIMAL(11) UNIQUE NOT NULL,
 nm_Cidade VARCHAR(20) NOT NULL, 
 nm_Bairro VARCHAR(20) NOT NULL,
 sg_Estado CHAR(2) NOT NULL,
@@ -26,17 +26,17 @@ CREATE TABLE Comprador(
 cd_Comprador INTEGER NOT NULL CHECK (cd_Comprador > 0),	
 nm_Comprador VARCHAR(40) NOT NULL, 
 ds_Endereco VARCHAR(40) NOT NULL, 
-cd_CPF DECIMAL(11) NOT NULL, 
+cd_CPF DECIMAL(11) UNIQUE NOT NULL, 
 nm_Cidade VARCHAR(20) NOT NULL, 
 nm_Bairro VARCHAR(20) NOT NULL, 
 sg_Estado VARCHAR(2) NOT NULL, 
 cd_Telefone VARCHAR(20) NOT NULL, 
-ds_Email VARCHAR(80) )
+ds_Email VARCHAR(80)  )
 
 
 CREATE TABLE Imovel(
 cd_Imovel INTEGER  NOT NULL CHECK (cd_Imovel > 0),
-cd_Vendedor INTEGER NOT NULL CHECK (cd_Vendedor > 0), 
+cd_Vendedor INTEGER  NOT NULL CHECK (cd_Vendedor > 0), 
 cd_Bairro INTEGER NOT NULL, 
 cd_Cidade INTEGER NOT NULL,
 sg_Estado CHAR(2) NOT NULL,  
@@ -52,8 +52,8 @@ qt_ImovelIndicado INTEGER)
 
 
 CREATE TABLE Oferta(
-cd_Comprador INTEGER NOT NULL CHECK (cd_Comprador > 0),
-cd_Imovel INTEGER NOT NULL CHECK (cd_Imovel > 0),
+cd_Comprador INTEGER  NOT NULL CHECK (cd_Comprador > 0),
+cd_Imovel INTEGER  NOT NULL CHECK (cd_Imovel > 0),
 vl_Oferta MONEY,
 dt_Oferta DATE)
 
@@ -65,21 +65,21 @@ nm_Estado varchar(20) NOT NULL)
 
 
 CREATE TABLE Cidade(
-cd_Cidade INTEGER NOT NULL, 
-sg_Estado CHAR(2) NOT NULL,
+cd_Cidade INTEGER  NOT NULL, 
+sg_Estado CHAR(2)  NOT NULL,
 nm_Cidade VARCHAR(20) NOT NULL)
 
 
 
 CREATE TABLE Bairro(
-cd_Bairro INTEGER NOT NULL,
-cd_Cidade INTEGER NOT NULL,
-sg_Estado CHAR(2) NOT NULL,
+cd_Bairro INTEGER  NOT NULL,
+cd_Cidade INTEGER  NOT NULL,
+sg_Estado CHAR(2)  NOT NULL,
 nm_Bairro VARCHAR(20) NOT NULL)
 
 
 CREATE TABLE Faixa_Imovel(
-cd_Faixa INTEGER NOT NULL,
+cd_Faixa INTEGER  NOT NULL,
 nm_Faixa VARCHAR(30), 
 vl_Maximo MONEY, 
 vl_Minimo MONEY NOT NULL CHECK (vl_Minimo > 0 ))
